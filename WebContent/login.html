@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Prijava</title>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="js/login.js"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<img src="./images/logo.png">
+		<div class="collapse navbar-collapse" id="navbarColor01">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link" href="index.html">Početna
+						<span class="sr-only">(current)</span>
+				</a></li>
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li class="nav-item active" id="log"></li>
+				<li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+			</ul>
+		</div>
+	</nav>
+	<form class='form' id="loginForm" method="post">
+		<fieldset>
+			<div class="form-group">
+				<div class="col-lg-10">
+					<input type="text" class="form-control" id="inputUserName"
+						name="username" placeholder="Korisničko ime">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-lg-10">
+					<input type="password" class="form-control" id="inputPassword"
+						name="password" placeholder="Lozinka">
+				</div>
+			</div>
+
+			<div id="errorLogin"></div>
+			<br>
+			<div class="form-group">
+				<div class="col-lg-10 col-lg-offset-1">
+					<input type="submit" class="btn btn-primary" value="Prijavi se" />
+				</div>
+			</div>
+
+		</fieldset>
+	</form>
+</body>
+</html>

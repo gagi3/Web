@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Emergencies</title>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="js/dateFormat.js"></script>
+<script src="js/datepicker.min.js"></script>
+<script src="js/home.js"></script>
+<script src="js/user.js"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
+<script src="js/googleMap.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		&nbsp;<img src="./images/logo.png">&emsp;
+		<div class="collapse navbar-collapse" id="navbarColor03">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link" href="#">Početna
+						<span class="sr-only">(current)</span>
+				</a></li>
+				<li class="nav-item"><a id='addEm' class='nav-link' href='addEmergency.html'>Prijavi vanrednu situaciju</a></li>
+				<li class="nav-item" id='teritories'></li>
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li class="nav-item" id="loggedIn"></li>
+				<li class="nav-item" id="log"></li>
+				<li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+				<li class="nav-item"><a class="nav-link" id="user"></a></li>
+			</ul>
+		</div>
+	</nav>
+	<div id="filter">
+		<table>
+			<tr>
+				<td></td>
+				<td><a href="#" onclick="clearFilters()">Clear filters</a></td>
+			</tr>
+			<tr height="50">
+				<td><label class='filterLabel' for="datepicker">Filtriraj po datumu:</label>&emsp;</td>
+				<td><input type="text" id="datepicker"
+					placeholder="Odaberi datum..."></td>
+			</tr>
+			<tr height="50">
+				<td><label class='filterLabel' for="urgencyFilter">Filtriraj po hitnosti:</label>&emsp;</td>
+				<td><select id="urgencyFilter"><option selected disabled>Izaberi hitnost...</option>
+					<option id="red">CRVENO</option>
+					<option id="orange">NARANDŽASTO</option>
+					<option id="blue">PLAVO</option>
+				</select></td>
+			</tr>
+			<tr height="50">
+				<td><label class='filterLabel' for="territoryFilter">Filtriraj po nazivu teritorije:</label>&emsp;</td>
+				<td><select id="territoryFilter"><option selected="selected">Izaberi teritoriju...</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><input type="radio" name='orderVol'
+					id='orderVol'>&ensp;Sortiraj po postavljenim volonterima</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+	<div id="emergencies"></div>
+</body>
+</html>
